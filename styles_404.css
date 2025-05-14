@@ -1,0 +1,37 @@
+body {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 100px 20px;
+  color: #333;
+}
+
+h1 {
+  font-size: 100px;
+  margin-bottom: 10px;
+  animation: bounce 1s infinite alternate;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}

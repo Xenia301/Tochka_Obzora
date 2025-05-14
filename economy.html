@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Новостной сайт о политике, экономике, спорте, науке и природе">
+    <meta name="keywords" content="новости, политика, экономика, спорт, наука, природа">
+    <meta name="author" content="Кочкина Ксения">
+    <title>Точка Обзора</title>
+    <link rel="stylesheet" href="styles_economy.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+   <header>
+    <div class="top-menu">
+        <div class="top-left">
+            <button id="theme-toggle" title="Сменить тему">
+                <img src="images/icons/theme.png" alt="Тема" id="icon-theme">
+            </button>
+            <button id="search-toggle" title="Поиск">
+                <img src="images/icons/search.png" alt="Поиск" id="icon-search">
+            </button>
+            <input type="text" id="search-input" placeholder="Поиск..." style="display: none;">
+        </div>
+
+        <div class="top-right">
+            <a href="form.html" class="register-link">Регистрация</a>
+            <a href="form.html" class="login-link">Вход</a>
+        </div>
+    </div>
+        <hr class="separator">
+        <h1 class="logo-container">
+            <img src="logok_e.jpg" alt="Логотип новостного сайта Точка Обзора" class="logo" id="main-logo">
+        </h1>
+        <nav class="center-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="politics.html">Политика</a></li>
+                <li><a href="sports.html">Спорт</a></li>
+                <li><a href="science.html">Наука</a></li>
+                <li><a href="nature.html">Природа</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+<main class="news-layout">
+  <!-- Левая колонка: главная новость -->
+  <section class="main-news">
+    <a href="#" class="news-link">
+      <img src="images/economy_images/main-news.jpg" alt="Главная экономическая новость" />
+      <h3>Криптовалюта “Баблкойн” подорожала на 3000%</h3>
+      <p>BubbleCoin взлетела в цене на 3000% после мема с котом в шляпе...</p>
+    </a>
+  </section>
+
+  <!-- Средняя колонка: две вертикальные новости -->
+  <div class="vertical-news">
+    <section class="news-box">
+      <a href="#" class="news-link">
+        <img src="images/economy_images/news1.jpg" alt="Новость 1" />
+        <h3>Центробанк ввёл купюру в 450 рублей</h3>
+        <p>Экономисты в растерянности, математики — в восторге...</p>
+      </a>
+    </section>
+    <section class="news-box">
+      <a href="#" class="news-link">
+        <img src="images/economy_images/news2.jpg" alt="Новость 2" />
+        <h3>В Госдуме предложили отменить кризис</h3>
+        <p>Поправка обсуждается вместе с режимом сна для экономики....</p>
+      </a>
+    </section>
+  </div>
+
+  <!-- Правая колонка: последние новости -->
+  <aside class="sidebar">
+    <h3>Новости этого часа</h3>
+    <ul>
+      <li><a href="#">Крупнейший банк Европы обвалился — акции падают на 40%</a></li>
+      <li><a href="#">Легендарный футболист объявил о завершении карьеры — заявление шокировало фанатов</a></li>
+      <li><a href="#">Прямая трансляция запуска Starship</a></li>
+      <li><a href="#">Сбой в работе ChatGPT и Instagram — сервисы недоступны по всему миру</a></li>
+    </ul>
+  </aside>
+</main>
+    <hr class="separator">
+    <section id="interactive-layout">
+    <h2 class="interactive-title">Экономика в графиках</h2>
+    <div class="interactive-content">
+        <div class="left-panel">
+        <div class="button-area">
+            <button id="changeTextButton1">Инфляция</button>
+            <div id="article1" class="graph-text" style="display: none;">
+            <p>Данные показывают постепенное снижение уровня инфляции, что может свидетельствовать о стабилизации экономической ситуации.
+                В 2024 году инфляция начинается с 4,4% в январе и последовательно снижается, достигая 3,0% к августу. Эта тенденция продолжается и в 2025 году, что может быть результатом эффективной монетарной политики или снижения внешних экономических pressures.
+                Отсутствие резких скачков на графике указывает на контролируемость процессов, что является положительным сигналом для бизнеса и населения.
+                Если данные за 2025 год являются прогнозом, можно ожидать дальнейшего улучшения ситуации. Однако важно учитывать внешние факторы, такие как изменения на мировых рынках или геополитические события.</p>
+            </div>
+
+            <button id="changeTextButton2">Недвижимость</button>
+            <div id="article2" class="graph-text" style="display: none;">
+            <p>Данные демонстрируют устойчивое снижение стоимости недвижимости, что может быть связано с изменениями экономических условий, процентных ставок или покупательской активности.
+                В первом квартале средняя цена составляла 8,4 млн долл., но к концу года она упала до 7,2 млн долл. Такое снижение может указывать на охлаждение рынка, увеличение предложения или снижение спроса.
+                Каждый квартал цена уменьшается примерно на 0,2–0,4 млн долл., что говорит о стабильной, но не резкой отрицательной динамике.
+                Возможные причины: Ужесточение кредитной политики банков. Увеличение объемов нового строительства. Изменение предпочтений покупателей (например, сдвиг в сторону аренды).</p>
+            </div>
+
+            <button id="changeTextButton3">Инвестиции</button>
+            <div id="article3" class="graph-text" style="display: none;">
+            <p>Данные показывают устойчивое снижение показателей, что может свидетельствовать о влиянии макроэкономических факторов или изменении рыночных условий.
+                В январе доходность составляла 5,0%, но уже к маю она упала до 0%. Такая динамика может быть связана с снижением деловой активности, ужесточением денежно-кредитной политики, увеличением рисков на финансовых рынках.
+                Критическое падение в мае: Нулевая доходность в мае указывает на возможный кризис доверия инвесторов или резкое ухудшение экономических условий.
+                 ёЕсли другие инструменты (например, облигации или депозиты) показывают рост, это может объяснять отток капитала из рискованных активов.</p>
+            </div>
+        </div>
+        </div>
+        <div class="right-panel">
+        <canvas id="chart1" style="display: none;"></canvas>
+        <canvas id="chart2" style="display: none;"></canvas>
+        <canvas id="chart3" style="display: none;"></canvas>
+        </div>
+    </div> 
+        <script src="script_economy.js"></script>
+    </section>
+
+    <hr class="separator">
+    <section id="news-feed">
+        <h3>Новосчти прошлой недели </h3>
+        <div class="news-list">
+            <article class="news-item">
+                <img src="images/economy_images/news3.jpg" alt="Новость 1" loading="lazy">
+                <h4>Китай запретил бедность — статистика сразу улучшилась</h4>
+                <p>Чиновники доложили о 100% благосостоянии населения. Всем, кроме репортёров, верить обязательно.</p>
+            </article>
+            <article class="news-item">
+                <img src="images/economy_images/news4.jpg" alt="Новость 2" loading="lazy">
+                <h4>Раздать всем по миллиону? Инфляция будет меньше, чем от слов ЦБ</h4>
+                <p>Эксперимент показал, что печатный станок работает медленнее, чем рот Набиуллиной.</p>
+            </article>
+            <article class="news-item">
+                <img src="images/economy_images/news5.jpg" alt="Новость 3" loading="lazy">
+                <h4>Греция снова просит у ЕС денег, но теперь в биткоинах</h4>
+                <p>"Так хоть инфляция не съест", — пояснил министр финансов, попивая фраппе.</p>
+            </article>
+            <article class="news-item">
+                <img src="images/economy_images/news6.jpg" alt="Новость 4" loading="lazy">
+                <h4>Эксперты о рынке криптовалюты</h4>
+                <p>Эксперты: криптовалюта — это не мыльный пузырь, а цифровой финансовый дурдом</p>
+            </article>
+        </div>
+    </section>
+    
+    <hr class="separator">
+    <div class="social-links">
+        <h4>Наши соцсети:</h4>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/telegram.png" alt="Telegram" id="icon-telegram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/instagram.png" alt="Instagram" id="icon-instagram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/facebook.png" alt="Facebook" id="icon-facebook" loading="lazy">
+        </a>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Точка Обзора</p>
+    </footer>
+</body>
+</html>

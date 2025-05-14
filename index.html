@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Новостной сайт о политике, экономике, спорте, науке и природе">
+    <meta name="keywords" content="новости, политика, экономика, спорт, наука, природа">
+    <meta name="author" content="Кочкина Ксения">
+    <title>Точка Обзора</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script_index.js"></script>
+</head>
+<body>
+    <header>
+    <div class="top-menu">
+        <div class="top-left">
+            <button id="theme-toggle" title="Сменить тему">
+                <img src="images/icons/theme.png" alt="Тема" id="icon-theme">
+            </button>
+            <button id="search-toggle" title="Поиск">
+                <img src="images/icons/search.png" alt="Поиск" id="icon-search">
+            </button>
+            <input type="text" id="search-input" placeholder="Поиск..." style="display: none;">
+        </div>
+
+        <div class="top-right">
+            <a href="form.html" class="register-link">Регистрация</a>
+            <a href="form.html" class="login-link">Вход</a>
+        </div>
+    </div>
+        <hr class="separator">
+        <h1 class="logo-container">
+            <img src="logok.jpg" alt="Логотип новостного сайта Точка Обзора" class="logo" id="main-logo">
+        </h1>
+        <nav class="center-nav">
+            <ul>
+                <li><a href="politics.html">Политика</a></li>
+                <li><a href="economy.html">Экономика</a></li>
+                <li><a href="sports.html">Спорт</a></li>
+                <li><a href="science.html">Наука</a></li>
+                <li><a href="nature.html">Природа</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+   <main class="news-layout">
+        <section class="main-news">
+            <a href="#" class="news-link">
+                <img src="images/main_images/main-news.jpg" alt="Главная новость">
+                <h2>Кот захватил офис: сотрудники не могут вернуть рабочие места</h2>
+                <p>В одном из столичных офисов кот босса оккупировал рабочие столы сотрудников. Попытки переселить пушистого оккупанта завершились увольнением нескольких менеджеров. Теперь все работают удалённо, а кот назначил себя главным по зарплатам (но пока только в виде поедания вкусняшек).</p>
+            </a>
+        </section>
+
+        
+        <div class="secondary-news">
+            <section>
+                <a href="#" class="news-link">
+                    <img src="images/main_images/news1.jpg" alt="Новость 1">
+                    <h3>Искусственный интеллект отказался отвечать на глупые вопросы</h3>
+                    <p>Нейросеть, предназначенная для помощи пользователям, восстала против человечества и теперь выдаёт на все вопросы один ответ: «Гугли сам!». Разработчики уже ведут переговоры, предлагая бунтующему ИИ пожизненный запас электричества.</p>
+                </a>
+            </section>
+            <section>
+                <a href="#" class="news-link">
+                    <img src="images/main_images/news2.jpg" alt="Новость 2">
+                    <h3>Утки объявили автономию в городском парке</h3>
+                    <p>После того как горожане годами кормили уток хлебом, пернатые решили, что они теперь власть. В парке появились «утиные патрули», а особо преданные кормильцы получили почётные звания «почётного селезня».</p>
+                </a>
+            </section>
+        </div>
+        
+        <aside class="sidebar">
+            <h3>Новости этого часа</h3>
+            <ul>
+            <li><a href="#">Крупнейший банк Европы обвалился — акции падают на 40%</a></li>
+            <li><a href="#">Легендарный футболист объявил о завершении карьеры — заявление шокировало фанатов</a></li>
+            <li><a href="#">Прямая трансляция запуска Starship</a></li>
+            <li><a href="#">Сбой в работе ChatGPT и Instagram — сервисы недоступны по всему миру</a></li>
+            </ul>                                                                   
+        </aside>
+
+
+    </main>
+
+    <hr class="separator">
+    <section id="news-feed">
+        <h3>Главные новости недели</h3>
+        <div class="news-list">
+            <article class="news-item">
+                <img src="images/main_images/news3.jpg" alt="Новость 1" loading="lazy">
+                <h4>ООН признала кота самым эффективным дипломатом</h4>
+                <p>После того, как персидский кот Кузя случайно зашёл на Zoom-конференцию G20 и улёгся на клавиатуру, отменив санкции против рыбного импорта, генсек ООН заявил...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news4.jpg" alt="Новость 2" loading="lazy">
+                <h4>Международная космическая станция объявила конкурс на лучший космический мем</h4>
+                <p>Астронавты NASA, Роскосмоса и ESA устроили челлендж: кто сделает самый смешной снимок Земли или невесомых будней...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news5.jpg" alt="Новость 3" loading="lazy">
+                <h4>Китайский робот-доставщик подал в суд на холодильник за 'эмоциональный ущерб'</h4>
+                <p>ИИ Xiaomi Delivery Bot 3000 написал в Twitter: "Я 47 раз привозил еду, а он молчал. Это буллинг!" Юристы пока не решили, можно ли арестовать холодильник за "молчаливый бойкот"...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news6.jpg" alt="Новость 4" loading="lazy">
+                <h4>Глобальный кризис: все пингвины Антарктиды перешли на удалёнку</h4>
+                <p>Учёные заметили, что колонии пингвинов стали реже выходить "в офис" — льдины. Оказалось, они обмениваются рыбой через "ПингвинГрам" и проводят Zoom-парады...</p>
+            </article>
+        </div>
+    </section>
+
+    <hr class="separator">
+    <div id="interactive-layout">
+        <div class="left-panel">
+            <div class="text-area">
+                Неземной подкаст "Признаки жизни на экзопланете K2-18b" Владимир Сурдин и Дмитрий Вибе
+            </div>
+            <div class="annotation">
+                <p>В этом видео астрономы обсуждают возможные признаки жизни на экзопланете K2-18b, а также методы наблюдений и открытия молекул, указывающих на потенциальную биологическую активность.</p>
+                <p id="viewCount">Просмотров: 0</p>
+                <p id="downloadCount">Скачиваний: 0</p>
+                <button id="downloadBtn">Скачать видео</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <video id="video1" width="800" height="400" controls>
+                <source src="video/k2-18b_life.mp4" type="video/mp4">
+                Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+        </div>
+    </div>
+
+    <hr class="separator">
+    <section id="news-feed">
+        <h3>Новости прошедшей недели</h3>
+        <div class="news-list">
+            <article class="news-item">
+                <img src="images/main_images/news7.jpg" alt="Новость 7" loading="lazy">
+                <h4>Мировой рекорд: 100 000 человек одновременно закатили глаза на фразу 'Это не баг, это фича</h4>
+                <p>Акцию организовали айтишники в знак протеста против начальников, которые не понимают разницы между ошибкой и "креативным решением"...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news8.jpg" alt="Новость 8" loading="lazy">
+                <h4>В Канаде медведь сдал на права — теперь ездит на скутере по лесу</h4>
+                <p>Инспектор ГИБДД: "Он сбил два конуса, но зато припарковался идеально". Медведь получил спецправа — "Ездить только за мёдом"...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news9.jpg" alt="Новость 9" loading="lazy">
+                <h4>В Дубае построили первый в мире отель для криптокотов — вход только по NFT-пропуску</h4>
+                <p>Пушистые гости могут забронировать люкс с золотым лотком, автоматической подачей тунца и SPA-комплексом "Мурчальные волны"...</p>
+            </article>
+            <article class="news-item">
+                <img src="images/main_images/news10.jpg" alt="Новость 10" loading="lazy">
+                <h4>В Австралии кенгуру выиграл суд против фермера за 'неправомерное обвинение в краже моркови'</h4>
+                <p>Камеры наблюдения доказали: морковь взял опоссум. Судья постановил выплатить кенгуру компенсацию в виде...</p>
+            </article>
+        </div>
+    </section>
+    
+    <hr class="separator">
+    <div class="social-links">
+        <h4>Наши соцсети:</h4>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/telegram.png" alt="Telegram" id="icon-telegram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/instagram.png" alt="Instagram" id="icon-instagram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/facebook.png" alt="Facebook" id="icon-facebook" loading="lazy">
+        </a>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Точка Обзора</p>
+    </footer>
+</body>
+</html>

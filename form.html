@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles_form.css">
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeToggle = document.getElementById('theme-toggle');
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                // Переключение класса на body
+                document.body.classList.toggle('dark-theme');
+                const isDark = document.body.classList.contains('dark-theme');
+
+                // Логотип
+                const logo = document.getElementById('main-logo');
+                if (logo) {
+                    logo.src = isDark ? 'logok_f_dark.jpg' : 'logok_f.jpg';
+                }
+
+                // Иконка смены темы
+                const iconTheme = document.getElementById('icon-theme');
+                if (iconTheme) {
+                    iconTheme.src = isDark ? 'images/icons/theme-dark.png' : 'images/icons/theme.png';
+                }
+
+                // Поисковая иконка (если она используется)
+                const iconSearch = document.getElementById('icon-search');
+                if (iconSearch) {
+                    iconSearch.src = isDark ? 'images/icons/search-dark.png' : 'images/icons/search.png';
+                }
+
+                // Социальные иконки
+                const telegramIcon = document.getElementById('icon-telegram');
+                if (telegramIcon) {
+                    telegramIcon.src = isDark ? 'images/icons/telegram-dark.png' : 'images/icons/telegram.png';
+                }
+
+                const instagramIcon = document.getElementById('icon-instagram');
+                if (instagramIcon) {
+                    instagramIcon.src = isDark ? 'images/icons/instagram-dark.png' : 'images/icons/instagram.png';
+                }
+
+                const facebookIcon = document.getElementById('icon-facebook');
+                if (facebookIcon) {
+                    facebookIcon.src = isDark ? 'images/icons/facebook-dark.png' : 'images/icons/facebook.png';
+                }
+            });
+        }
+
+        // Валидация формы
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name')?.value.trim();
+                const surname = document.getElementById('surname')?.value.trim();
+                const email = document.getElementById('email')?.value.trim();
+                const password = document.getElementById('password')?.value.trim();
+
+                if (!name || !surname || !email || !password) {
+                    alert("Пожалуйста, заполните все поля.");
+                    return;
+                }
+
+                // Можно добавить отправку данных или переход на другую страницу
+                window.location.href = "index.html";
+            });
+        }
+    });
+    </script>
+
+</head>
+<body>
+    <div class="main-layout">
+        <!-- Левая часть с логотипом -->
+        <div class="left-part">
+            <button id="theme-toggle" title="Сменить тему">
+                <img src="images/icons/theme.png" alt="Тема" id="icon-theme">
+            </button>
+            <a href="index.html" class="logo-link">
+                <img src="logok_f.jpg" alt="Логотип" class="logo" id="main-logo">
+            </a>
+        </div>
+
+        <!-- Правая часть с анкетой -->
+        <div class="right-part">
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите имя" required>
+
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" placeholder="Введите фамилию" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" placeholder="Введите email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+                <label>Какие новости вам интересны:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="politics" name="news">
+                    <label for="politics">Политика</label>
+
+                    <input type="checkbox" id="economy" name="news">
+                    <label for="economy">Экономика</label>
+
+                    <input type="checkbox" id="sports" name="news">
+                    <label for="sports">Спорт</label>
+
+                    <input type="checkbox" id="science" name="news">
+                    <label for="science">Наука</label>
+
+                    <input type="checkbox" id="nature" name="news">
+                    <label for="nature">Природа</label>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Разделитель -->
+    <hr class="separator">
+
+    <!-- Социальные сети -->
+    <div class="social-links">
+        <h4>Наши соцсети:</h4>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/telegram.png" alt="Telegram" id="icon-telegram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/instagram.png" alt="Instagram" id="icon-instagram" loading="lazy">
+        </a>
+        <a href="404.html" class="social-link" data-error-page="404.html">
+            <img src="images/icons/facebook.png" alt="Facebook" id="icon-facebook" loading="lazy">
+        </a>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2025 Точка Обзора</p>
+    </footer>
+</body>
